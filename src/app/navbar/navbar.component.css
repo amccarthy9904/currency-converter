@@ -1,5 +1,4 @@
 header{
-  background-color: #2196f3;
   padding: 15px;
 }
 
@@ -10,7 +9,7 @@ a{
 }
 
 a:hover{
-  background-color: #20767c;
+  background-color: var(--bs-dark);
 }
 
 
