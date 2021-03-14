@@ -10,8 +10,9 @@ input, select {
 }
 
 b{
-  color: #2196f3;
+  color: var(--bs-teal);
   margin: 20px;
+  padding:20px;
   font-size: 26px;
 
 }
@@ -19,5 +20,11 @@ b{
 .btn-primary{
   margin: 8px;
   margin-right: 12px;
+  background-color: var(--bs-grey);
+  border-color: var(--bs-teal);
 }
 
+h1{
+  margin: 20px;
+  color: var(--bs-teal);
+}

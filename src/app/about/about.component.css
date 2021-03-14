@@ -1,3 +1,6 @@
 :host{
   text-align: center;
 }
+a{
+  color: var(--bs-teal);
+}
