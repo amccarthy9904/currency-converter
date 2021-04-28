@@ -17,9 +17,15 @@ export class ConverterComponent implements OnInit {
     return this.amount * this.rates[this.to];
   }
 
+  swap(){
+    let temp = this.from
+    this.from = this.to
+    this.to = temp
+    this.loadRates()
+  }
+
   loadRates(){
     this.service.getRates(this.from).subscribe(res => this.rates = res.rates);
-
   }
 
   getAllCurrencies(): string[]{
