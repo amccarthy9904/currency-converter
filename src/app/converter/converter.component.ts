@@ -7,10 +7,10 @@ import { CurrencyExchangeService } from "../services/exchange-rates.service";
   styleUrls: ['./converter.component.css']
 })
 export class ConverterComponent implements OnInit {
-
+  currencies = ['KWD', 'BHD', 'OMR', 'JOD', 'GIP', 'GBP', 'KYD', 'EUR', 'USD', 'CHF', 'BND', 'CAD', 'AUD', 'LYD', 'SGD', 'NZD', 'FJD', 'BRL', 'ILS', 'TRY']
   amount = 1;
-  from = 'CAD';
-  to = 'USD';
+  from = 'USD';
+  to = 'CAD';
   rates: {[key: string]: number}
 
   convert(): number{
@@ -25,7 +25,8 @@ export class ConverterComponent implements OnInit {
   }
 
   loadRates(){
-    this.service.getRates(this.from).subscribe(res => this.rates = res.rates);
+    this.service.getRates(this.from).subscribe(res => this.rates = res);
+    console.log(this.rates)
   }
 
   getAllCurrencies(): string[]{
