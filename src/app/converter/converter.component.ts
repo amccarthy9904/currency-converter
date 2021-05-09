@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrencyExchangeService } from "../services/exchange-rates.service";
+import { ExchangeRatesService } from "../services/exchange-rates.service";
 
 @Component({
   selector: 'app-converter',
@@ -33,7 +33,7 @@ export class ConverterComponent implements OnInit {
     return Object.keys(this.rates)
   }
 
-  constructor(private service: CurrencyExchangeService) {
+  constructor(private service: ExchangeRatesService) {
 
   }
 
